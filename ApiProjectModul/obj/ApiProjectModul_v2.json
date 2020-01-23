@@ -1,0 +1,40 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Sample API",
+    "description": "A sample application with Swagger, Swashbuckle, and API versioning.",
+    "version": "2.0"
+  },
+  "paths": {
+    "/api/v{version}/allmodelisation": {
+      "get": {
+        "tags": [
+          "AllModelisation"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
